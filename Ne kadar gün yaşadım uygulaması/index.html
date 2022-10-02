@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container{
+            margin: auto;
+            width: 700px;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .hesapkutusu{
+            border: 1px solid black;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #C3F1FA;
+            border: hidden;
+            border-radius: 600px;
+            box-shadow: 2px 2px 5px  grey;
+            color:white;
+            
+        }
+        #input1{
+            width: 200px;
+            height: 25px;
+            margin: 20px;
+            border: none;
+        }
+        button{
+            
+            width: 100px;
+            height: 40px;
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            border-radius: 100px;
+        }
+        .sonuc2{
+            width: 300px;
+            height: 300px;
+            position:absolute;
+            top: 100px;
+            left: 450px;
+            border-radius: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .sonuc{
+            width: 300px;
+            height: 300px;
+            position:absolute;
+            top: 500px;
+            right: 450px;
+            border-radius: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div  class="hesapkutusu">
+            <h1>KAÇ GÜN YAŞADIM 🤔</h1>
+            KAÇ YAŞINDASIN ?<input id="input1" type="text">
+            <button type="submit" onclick="hesapla()">HESAPLA</button>
+        </div>
+    </div>
+    <div class="sonuc">
+
+    </div>
+    <div class="sonuc2">
+
+    </div>
+
+    <script>
+        function hesapla(){
+            var sonuc=document.getElementsByClassName("sonuc")[0];
+            var input1=document.getElementById("input1");
+            var input2=document.getElementById("input2");
+            var p=document.createElement("p");
+
+            if(input1.value){
+            sonuc.innerHTML=""
+            sonuc.appendChild(p);
+            p.innerHTML=(input1.value*365) 
+            sonuc.style.backgroundColor="#73FFA8"
+            sonuc.style.color="white"
+            sonuc.style.fontSize="50px"
+            sonuc.style.boxShadow="2px 2px 5px gray"
+            input1.value=""
+            
+            }
+            
+            
+        }
+    </script>
+</body>
+</html>
